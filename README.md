@@ -1,72 +1,140 @@
-# Project_llm_chatbot.
-# LLM-Based Intelligent Chatbot  An **LLM-powered intelligent chatbot** built using **Python, Flask, Retrieval-Augmented Generation (RAG), ChromaDB, and Ollama**. The project allows users to interact with uploaded documents and receive **context-aware, intelligent responses** using a local LLM pipeline.  ---
+LLM-Based Intelligent Chatbot
 
+An intelligent, document-aware chatbot built using Python, Flask, Retrieval-Augmented Generation (RAG), ChromaDB, and Ollama. This application allows users to upload documents and interact with them in real-time, receiving accurate, context-aware responses powered by a local Large Language Model pipeline.
 
 🚀 Features
-💬 Interactive chatbot interface with Flask
-📄 Document upload and processing
-🔍 Retrieval-Augmented Generation (RAG)
-🧠 Context-aware answers using vector search
-🤖 Local LLM integration with Ollama
-🗂️ Modular prompt management
-🎨 Simple chatbot UI prototype
-📘 Developer guide included for easy extension
+
+💬 Interactive Chatbot Interface: Clean and simple web UI built with Flask.
+
+📄 Document Upload & Processing: Seamlessly parse and extract text from uploaded files (PDFs, docs).
+
+🔍 Retrieval-Augmented Generation (RAG): Combines vector search with generative AI for grounded responses.
+
+🧠 Vector Search Engine: Leverages ChromaDB for efficient document embedding and semantic retrieval.
+
+🤖 Local LLM Integration: Powered by Ollama for privacy-focused, offline-first execution without API costs.
+
+🗂️ Modular System Architecture: Clean separation of concerns with prompt management, file handling, and query classification.
+
+📘 Developer Guide: Includes explicit architectural documentation for easy maintenance and extension.
+
 🛠️ Tech Stack
-Python 3.x
-Flask
-Ollama
-ChromaDB
-PyPDF2 / document loaders
-HTML, CSS, JavaScript
-WSL / Ubuntu
+
+Backend Framework: Python 3.x, Flask
+
+LLM & Inference: Ollama (Llama 3)
+
+Vector Database: ChromaDB
+
+Document Processing: PyPDF2 / Custom Loaders
+
+Frontend: HTML5, CSS3, JavaScript
+
+Environment: WSL / Linux (Ubuntu)
+
 📁 Project Structure
+
 llm-based-intelligent-chatbot/
-│── app.py
-│── document_loader.py
-│── file_handler.py
-│── greeting_handler.py
-│── llm_rag.py
-│── query_classifier.py
-│── rag_pipeline.py
-│── requirements.txt
-│── developer_guide.md
-│── .gitignore
-│── templates/
-│── chatbot_dummy_ui/
-│── modules_prompt/
+│── app.py                 # Flask main application entry point
+│── document_loader.py     # Document parsing and extraction logic
+│── file_handler.py        # File validation and upload utilities
+│── greeting_handler.py    # Basic conversational intent handler
+│── llm_rag.py             # RAG logic and Ollama interface
+│── query_classifier.py    # Query intent classification
+│── rag_pipeline.py       # End-to-end vector indexing and retrieval
+│── requirements.txt       # Project dependencies
+│── developer_guide.md     # In-depth architectural guide for developers
+│── .gitignore             # Standard git ignore rules
+│── templates/             # HTML templates for Flask UI
+│── chatbot_dummy_ui/      # Prototype UI assets / static files
+└── modules_prompt/        # System prompts and prompt templates
+
+
 ⚙️ Installation & Setup
-1) Clone the repository
+
+Prerequisites
+
+Ensure you have Ollama installed on your machine.
+
+1. Clone the Repository
+
 git clone https://github.com/sourabhsk24/project_llm_chatbot.git
 cd llm-based-intelligent-chatbot
-2) Create virtual environment
+
+
+2. Create and Activate a Virtual Environment
+
 python3 -m venv venv
 source venv/bin/activate
-3) Install dependencies
+
+
+Note: On Windows, use venv\Scripts\activate.
+
+3. Install Dependencies
+
 pip install -r requirements.txt
-4) Run Ollama model
-Make sure Ollama is installed and the required model is available:
+
+
+4. Pull and Run the Ollama Model
+
+Ensure Ollama is running in the background and pull your preferred model (default: llama3):
 
 ollama run llama3
-5) Start the Flask app
+
+
+5. Launch the Application
+
 python app.py
-▶️ Usage
-Start the Flask server
-Open the chatbot UI in browser
-Upload sample PDF/documents
-Ask questions based on uploaded content
-Receive context-aware AI responses
-🎯 Use Cases
-📚 PDF-based question answering
-🎓 Student academic assistant
-📄 Knowledge base chatbot
-🏢 Internal document search bot
-🤖 Local LLM experimentation project
-🔮 Future Enhancements
-Multi-document querying
-Conversation memory
-User authentication
-Cloud deployment
-Better UI/UX
-Support for multiple LLMs
+
+
+By default, the server will be available at http://127.0.0.1:5000/.
+
+▶️ Usage Guide
+
+Start the Flask server following the setup instructions.
+
+Open your web browser and navigate to http://127.0.0.1:5000/.
+
+Upload a sample document (PDF or text file) through the user interface.
+
+Enter questions in the chat interface regarding the content of your uploaded document.
+
+Receive accurate, contextually relevant answers generated by the local LLM.
+
+🎯 Primary Use Cases
+
+📚 PDF-Based Question Answering: Instantly extract insights from lengthy research papers or manuals.
+
+🎓 Academic Assistant: Help students review study materials and lecture notes.
+
+📄 Knowledge Base Chatbot: Enable efficient search across internal corporate documents.
+
+🏢 Enterprise Search: Secure, local document querying with zero data leakage.
+
+🤖 Local LLM Sandbox: A modular base project for experimenting with RAG pipelines.
+
+🔮 Future Roadmap
+
+[ ] Support for multi-document simultaneous querying.
+
+[ ] Persistent conversational memory across sessions.
+
+[ ] Role-based access control and user authentication.
+
+[ ] Docker containerization and cloud deployment options.
+
+[ ] Refined UI/UX with modern frameworks.
+
+[ ] Multi-LLM selection dynamic switching.
+
 👨‍💻 Author
-Shaaz Makthumbade Aspiring Python / AI Developer
+
+Shaaz Makthumbade
+
+Aspiring Python / AI Developer
+
+GitHub: @sourabhsk24
+
+📜 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
