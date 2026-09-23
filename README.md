@@ -133,7 +133,7 @@ Shaaz Makthumbade
 
 Aspiring Python / AI Developer
 
-GitHub: @sourabhsk24
+
 
 📜 License
 
